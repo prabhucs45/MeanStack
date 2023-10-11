@@ -1,15 +1,16 @@
 import express from "express";
 import { createRole, updateRole, getAllRoles, deleteRole } from '../controllers/role.controller.js'
+import { verifyAdmin } from '../utils/verifyToken.js';
 
 const router = express.Router();
 
 // Create a new role
-router.post('/', createRole);
+router.post('/', verifyAdmin, createRole);
 
-router.put('/:id', updateRole);
+router.put('/:id', verifyAdmin, updateRole);
 
-router.get('/getAll', getAllRoles);
+router.get('/getAll', verifyAdmin, getAllRoles);
 
-router.delete('/:id', deleteRole);
+router.delete('/:id', verifyAdmin, deleteRole);
 
 export default router;
