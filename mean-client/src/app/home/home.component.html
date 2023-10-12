@@ -1,3 +1,33 @@
-<p>Home Component</p>
 
-<button (click)="getUserList()">Get Users</button>
+<div class="user-align">
+    <span class="pos-username">{{userName}}</span>
+    <button class="logout" (click)="clearStorage()">
+        Logout
+    </button>
+</div>
+
+
+<table>
+    <tr>
+        <th>Admin Functions</th>
+        <th>User Functions</th>
+    </tr>
+    <tr>
+        <td>
+            <button (click)="registerAdmin()">Register Admin</button>
+        </td>
+        <td>
+            <button (click)="getUserById()">Get User By Id</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button (click)="getUserList()">Get All Users</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Add Role
+        </td>
+    </tr>
+</table>

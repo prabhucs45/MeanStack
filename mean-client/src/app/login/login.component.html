@@ -1,12 +1,12 @@
 <!-- <div id="bg"></div> -->
 
-<form>
+<form [formGroup]="loginForm">
     <div class="form-field">
-        <input type="email" placeholder="Email / Username" required />
+        <input type="email" formControlName="email" placeholder="Email / Username" required />
     </div>
 
     <div class="form-field">
-        <input type="password" placeholder="Password" required />
+        <input type="password" formControlName="password" placeholder="Password" required />
     </div>
 
     <div class="form-field">
